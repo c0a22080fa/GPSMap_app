@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>八王子市マップ</title>
+    <title>現在地と天気情報</title>
     <script>
         function getLocation() {
             if (navigator.geolocation) {
@@ -15,7 +15,7 @@
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
 
-            // Update the map iframe source with new coordinates
+            // 地図の iframe のソースを更新して、現在地を表示
             const iframe = document.getElementById("map");
             iframe.src = "/map?lat=" + latitude + "&lon=" + longitude;
         }
@@ -39,7 +39,7 @@
     </script>
 </head>
 <body onload="getLocation()">
-    <h1>八王子市の地図</h1>
+    <h1>現在地と天気情報</h1>
     <iframe id="map" src="" width="100%" height="500px" frameborder="0"></iframe>
 </body>
 </html>
